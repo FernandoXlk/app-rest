@@ -29,14 +29,14 @@ const pratos = [
 
 export default function Explore() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Cardápio</Text>
+    <View style={s.container}>
+      <Text style={s.titulo}>Cardápio</Text>
       <FlatList data={pratos}keyExtractor={(item) => item.id}showsVerticalScrollIndicator={false} renderItem={({ item }) => (
-          <TouchableOpacity style={styles.card} activeOpacity={0.85}>
-              <Image source={item.imagem} style={styles.imagem}/>
-            <View style={styles.info}>
-              <Text style={styles.nome}>{item.nome}</Text>
-              <Text style={styles.preco}>{item.preco}</Text>
+          <TouchableOpacity style={s.card} activeOpacity={0.85}>
+              <Image source={item.imagem} style={s.imagem}/>
+            <View style={s.info}>
+              <Text style={s.nome}>{item.nome}</Text>
+              <Text style={s.preco}>{item.preco}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -46,10 +46,10 @@ export default function Explore() {
   );
 }
 
-const styles = StyleSheet.create({
+const s = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e2a03c",
+    backgroundColor: "#000000",
     paddingHorizontal: 18,
     paddingTop: 50,
   },
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 34,
     fontWeight: "700",
-    color: "#f5f4f0",
+    color: "#D4AF37",
     textAlign: "center",
     marginBottom: 20,
   },
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     overflow: "hidden",
     marginBottom: 22,
-
     shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 8,
